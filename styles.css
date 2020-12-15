@@ -68,7 +68,7 @@ nav
     display: flex;
     align-items: center;
     width: 50%; 
-    justify-content: right;
+    justify-content: flex-end;
     position: relative;
 }
 .search-icon
@@ -214,16 +214,17 @@ nav
 .display-contents
 {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     width: 100%;
     margin-bottom: 25px;
 }
 .box
 {
-    min-width: 11%;
-    height: 195px;
+    min-width: 14.5%;
+    max-width: 14.5%;
+    height: 210px;
     margin: 2% 1%;
     position: relative;
     transition: scale 0.3s ease;
@@ -293,6 +294,7 @@ footer
     .box
     {
         min-width: 23%;
+        max-width: 23%;
         height: 220px;
         margin: 2% 3%;
     }
@@ -411,6 +413,12 @@ footer
     {
         font-size: 300%;
     }
+    .box
+    {
+        margin: 2% 1%;
+        min-width:28%;
+        max-width:29%;
+    }
 }
 @media only screen and (max-width: 480px)
 {
@@ -436,7 +444,6 @@ footer
     }
     .box
     {
-        min-width: 20%;
         height: 120px;
         margin: 1.5%;
     }
