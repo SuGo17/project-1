@@ -1,0 +1,457 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html
+{
+    font-size: 10px;
+    background: #000;
+}
+/*------------------------------------------------------Header--------------------------------------------------------------------*/
+nav a
+{
+    text-decoration: none;
+    color: #000;
+    font-size: 150%;
+}
+nav,.nav-links ul,.nav-links
+{
+    display: flex;
+    align-items: center;
+}
+header
+{
+    display: flex;
+    flex-direction: column;
+}
+nav
+{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 10vh;
+    padding: 1% 13%;
+    background: #f3de68;
+}
+.logo
+{
+    padding: 4px 10px;
+    font-size: 280%;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    color: black;
+    box-shadow: 0.5px 0.5px 10px #00000080;
+    background:linear-gradient(to right, #d49b00,#fae361);
+}
+.nav-links
+{
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    font-weight: 600;
+}
+.nav-links ul
+{
+    list-style: none;
+    width: 40%;
+    justify-content: space-around;
+}
+.nav-links ul li a:hover
+{
+    border-bottom:2px solid #000;
+}
+.search
+{
+    display: flex;
+    align-items: center;
+    width: 50%; 
+    justify-content: right;
+    position: relative;
+}
+.search-icon
+{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: none;
+    font-size: 180%;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border:none;
+    color: #fff;
+    width:23px;
+    height: 23px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.dropdown
+{
+    width: 8vw;
+    min-width: 100px;
+    position: relative;
+    height: 28px;
+}
+.dropdown-select
+{
+    padding: 0.2rem 2rem;
+    border-radius: 4px;
+    font-size: 150%;
+    background-color: #000;
+    color: #fff;
+    margin-right: 15px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.dropdown-list
+{
+    padding: 0.2rem 2rem;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    z-index: 5;
+    top: 102%;
+    left: 0%;
+    right: 0%;
+    display: none;
+    transition: display 0.5s 1 ease-in;
+}
+.dropdown:hover .dropdown-list
+{
+    display: block;
+}
+.dropdown-list-item
+{
+    font-size: 130%;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+}
+.search input
+{
+    width: 50%;
+    min-width: 180px;
+    padding: 1% 2%;
+    height: 28px;
+    background: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-left: 5%;
+}
+.search input:focus
+{
+    background-color: rgba(0, 0, 0, 0.911);
+} 
+.nav-icon
+{
+    display: none;
+}
+.carousel
+{
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    margin: auto;
+    width: 70%;margin-top: 3%;
+    position: relative;
+}
+.carousel img
+{
+    width: 100%;
+}
+.b-btn,.f-btn
+{
+    position: absolute;
+    font-size: 400%;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    height: 100px;
+}
+.b-btn
+{
+    left: 1%;
+}
+.f-btn
+{
+    right: 1%;
+}
+/*------------------------------------------------------Section-Popular--------------------------------------------------------------------*/
+.popular
+{
+    display: flex;
+    flex-direction: column;
+    padding: 1% 13%;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+.popular h3
+{
+    font-size: 280%;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+}
+.display-contents
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 25px;
+}
+.box
+{
+    min-width: 11%;
+    height: 195px;
+    margin: 2% 1%;
+    position: relative;
+    transition: scale 0.3s ease;
+}
+.box img
+{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+.descrition
+{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    line-height: 200%;
+    background: #00000085;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
+    transition:line-height 0.2s ease-in;
+}
+.descrition h2
+{
+    font-size: 105%;
+}
+.box:hover .descrition
+{
+    background: #00000085;
+    line-height: 230%;
+}
+.box:hover
+{
+    scale: 1.1;
+}
+/*-------------------------------------------------------Footer------------------------------------------------*/
+footer
+{
+    padding: 0.25% 13%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right,#65d6ce,#fff3b2);
+}
+.copy-rights
+{
+    margin-left: 2%;
+    font-size: 120%;
+}
+
+/*---------------------------------------------------------------------------------Responsive-------------------------------------------------------------*/
+@media only screen and (max-width: 1200px)
+{
+    nav
+    {
+        padding: 1% 10%;
+    }
+    .search
+    {
+        width: 40%;
+    }
+    .display-contents
+    {
+        width: 80%;
+    }
+    .box
+    {
+        min-width: 23%;
+        height: 220px;
+        margin: 2% 3%;
+    }
+    footer
+    {
+        padding: 1% 10%;
+    }
+}
+@media only screen and (max-width: 1024px)
+{
+    nav
+    {
+        padding: 1% 8%;
+        justify-content: left;
+    }
+    .nav-links
+    {
+        margin-left: 10px;
+        justify-content: space-between;
+        width: 85%;
+    }
+    .search input
+    {
+        padding: 2% 3%;
+    }
+    .display-contents
+    {
+        width: 100%;
+    }
+    footer
+    {
+        padding: 1% 8%;
+    }
+}
+@media only screen and (max-width: 768px)
+{
+    nav
+    {
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+    }
+    .nav-links,.nav-links ul
+    {
+        flex-direction: column;
+    }
+    .nav-links,.nav-links ul li,.nav-links ul,.nav-links ul li a,.search
+    {
+        width: 100%;
+        text-align: center;
+        align-items: unset;
+    }
+    .nav-links ul li a
+    {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+        border-bottom: 1px solid #000;
+        border-top: 1px solid #000;
+    }
+    .nav-links ul 
+    {
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        margin-bottom: 10px;
+    }
+    .nav-links ul li a:hover
+    {
+        background: #f1d530;
+        border-bottom: 1px solid #000;
+    }
+    .nav-links
+    {
+        position: absolute;
+        padding: 1% 8%;
+        top: 100%;
+        left: 0px;
+        margin: 0;
+        z-index: 1;
+        background: #f3de68;
+        width: 100%;
+        display: none;
+    }
+    .search
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search ion-icon
+    {
+        bottom: 0;
+    }
+    .logo
+    {
+        width: 68px;
+    }
+    .search input
+    {
+        margin-left: 0;
+        margin-top: 5px;
+        width: 100%;
+    }
+    .search-icon
+    {
+        right: 5px;
+        top: 57%;
+        transform: unset;
+    }
+    .nav-icon
+    {
+        display: block;
+        font-size: 500%;
+        cursor: pointer;
+    }
+    .b-btn,.f-btn
+    {
+        font-size: 300%;
+    }
+}
+@media only screen and (max-width: 480px)
+{
+    .nav-links
+    {
+        font-size: 70%;
+    }
+    .logo
+    {
+        font-size: 180%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .carousel
+    {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .popular h3
+    {
+        font-size: 180%;
+    }
+    .box
+    {
+        min-width: 20%;
+        height: 120px;
+        margin: 1.5%;
+    }
+    .descrition 
+    {
+        font-size: 50%;
+    }
+    .descrition p
+    {
+        display: none;
+    }
+    footer
+    {
+        margin-top: 20px;
+        font-size: 80%;
+        width: 100%;
+    }
+}
